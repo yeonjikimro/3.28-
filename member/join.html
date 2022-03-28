@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<head>
+<style>
+input[name=phone] {width: 60px}
+</style>
+</head>
+<body>
+<input type='button' value= '닫기' onclick='window.close()'>
+<h2>회원가입</h2>
+<a href='../index.html'>홈으로</a>
+<!-- 혹은 <a href='주소'>홈으로</a> -->
+<a href='html/ex_input.html'>추가input실습</a>
+<!-- 입력항목의 값(데이터)을 전송하려면 form태그에 선언한다.
+각 입력항목은 name 속성을 가져야 한다
+: 입력항목의 데이터가 name속성의 파라미터명으로 전송되므로 
+
+action 속성을 지정하지 않으면 자기자신페이지를 요청한다.
+전송된 파라미터가 주소창에 노출되지 않게 하려면 method를 post로 지정한다
+method: 데이터전송방식
+
+form 태그내에 file 태그를 전송하는 경우
+: 1. form 태그 전송 방식이 post이어야 한다 : method='post'
+	2. 파일 데이터 전송 가능 형태로 지정: enctype='multipart/form-data'
+-->
+<form method='post' action='../index.html'
+			enctype='multipart/forrm-data'>
+<table>
+	<colgroup>
+		<col width='150px'>
+		<col width='350px'>
+		
+	<caption>회원가입정보</caption>
+	<tr>
+		<th>아이디</th>
+		<td><input type='text' name='id'></td>	
+	</tr>
+	<tr>
+		<th>비밀번호</th>
+		<td><input type='password'>
+	</tr>
+	<tr>
+		<th>성별</th>
+	</tr>
+	<tr>
+		<th>사진등록</th>
+		<td><label><input type='file' style='display:none' name='profile'>
+		<img src='../images/html/chick.jpg' width='80px; height: 15px;'
+		style='border=1px solid'></label></td>
+	</tr>
+
+</table>
+</form>
+
+
+
+</body>
+</html>

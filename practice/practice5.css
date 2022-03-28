@@ -1,0 +1,7 @@
+@charset "UTF-8";
+h1 {
+		display: inline-block;
+		background-color: black;
+		color: white; }
+	div {display: inline-block; padding: 30px;
+		color: blue;}

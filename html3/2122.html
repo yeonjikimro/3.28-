@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+table { border-collapse: collapse; 
+	width: 700px 400px;}
+th, td {padding: 10px 30px;}
+</style>
+<title>실습정리</title>
+</head>
+<!-- 혹은 <a href='주소'>홈으로</a> -->
+
+<!-- 입력항목의 값(데이터)을 전송하려면 form태그에 선언한다.
+각 입력항목은 name 속성을 가져야 한다
+: 입력항목의 데이터가 name속성의 파라미터명으로 전송되므로 
+action 속성을 지정하지 않으면 자기자신페이지를 요청한다.
+전송된 파라미터가 주소창에 노출되지 않게 하려면 method를 post로 지정한다.
+-->
+
+<h2>회원가입정보</h2>
+<form method='post' action='../index.html'>
+<table border ="1">
+	<colgroup>
+		<col width='150px'>
+		<col width='350px'>
+
+	<tr>
+	<th>아이디</th>
+	<td><input type='text' name='id'></td>
+	</tr>
+	<tr>
+	<th>비밀번호</th>
+	<td><input type='text' name='password'></td>
+	</tr>
+	<tr>
+	<th>비밀번호확인</th>
+	<td><input type='text' name='passcheck'></td>
+	</tr>
+	<tr>
+	<th>이름</th>
+	<td><input type='text' name='name'></td>
+	</tr>
+	<tr>
+	<th>성별</th>
+	<td><input type='radio' name='gender' value='남' id='male'><label for='male'>남</label>
+	<input type='radio' name='gender' value='여' id='female'><label for='female'>여</label></td>
+	</tr>
+	<tr>
+	<th>전화번호</th>
+	<td> 
+	<select name='phonenumber'>
+		<option value='c1'>02</option>
+		<option value='c2'>061</option>
+		<option value='c3'>062</option>
+	</select>
+	<input type='text' name='middle' style= 'width: 50px;'>
+	<input type='text' name='last' style= 'width: 50px;'>
+	</td>
+	<tr>
+	<th>SMS 수신여부</th>
+	<td><label><input type='checkbox' name='sms' value='수신함'>수신함</label>
+	</td>
+	</tr>
+	<tr>
+	<th>이메일</th>
+	<td><input type='text' name='email'> @
+	<select name='service'>
+		<option selected>직접입력</option>
+		<option value='naver.com'>naver.com</option>
+		<option value='daum.net'>daum.net</option>
+		<option value='gmail.com'>google.com</option>
+	</select></td>
+	<!-- 
+	email=abc&service=naver.com
+	abc+'@'+'naver.com'
+	 -->
+	</tr>
+	<tr>
+	<th>사진등록</th>
+	<td><input type='file' name='profile'></td>
+	</tr>
+	<tr>
+		<td colspan='2' >
+			<input type='submit' value='회원가입' style='width:100px'></td>
+
+
+</table>
+</form>
